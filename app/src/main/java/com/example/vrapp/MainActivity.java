@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onDestroy() {
         mVRPanoramaView.shutdown();
+        mVRPanoramaView = null;
         super.onDestroy();
     }
 }
