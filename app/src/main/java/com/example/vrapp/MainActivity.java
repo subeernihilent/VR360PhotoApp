@@ -18,14 +18,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mVRPanoramaView = findViewById(R.id.vrPanoramaView);
+        init();
         loadPhotoSphere();
+    }
+
+    private void init() {
+        mVRPanoramaView = findViewById(R.id.vrPanoramaView);
     }
 
     private void loadPhotoSphere() {
         VrPanoramaView.Options options = new VrPanoramaView.Options();
         InputStream inputStream = null;
-
         AssetManager assetManager = getAssets();
         try {
             inputStream = assetManager.open("360photo1.jpg");
