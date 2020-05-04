@@ -3,6 +3,7 @@ package com.example.vrapp;
 import android.content.res.AssetManager;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             mVRPanoramaView.loadImageFromBitmap(BitmapFactory.decodeStream(inputStream), options);
             inputStream.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e("MainActivity",e.getMessage());
         }
 
     }
