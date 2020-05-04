@@ -1,0 +1,2 @@
+rootProject.name='VR360PhotoApp'
+include ':app'
